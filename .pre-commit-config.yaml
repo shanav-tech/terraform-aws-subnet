@@ -1,13 +1,12 @@
 repos:
-  - repo: https://github.com/antonbabenko/pre-commit-terraform
-    rev: v1.79.0
+  - repo: https://github.com/gruntwork-io/pre-commit
+    rev: v0.1.12 # Get the latest from: https://github.com/gruntwork-io/pre-commit/releases
     hooks:
       - id: terraform-fmt
-        args: ["--recursive"]
-        language: system
+      - id: shellcheck
 
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.0.1
+    rev: v4.0.1 # Use the ref you want to point at
     hooks:
       - id: trailing-whitespace
       - id: mixed-line-ending
@@ -23,4 +22,3 @@ repos:
     hooks:
       - id: terraform-docs-go
         args: ["markdown", "table", "--output-file", "README.md", "./"]
-        language: system
