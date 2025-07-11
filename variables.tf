@@ -83,14 +83,6 @@ variable "ipv6_cidr_block" {
   description = "Base CIDR block which is divided into subnet CIDR blocks (e.g. `10.0.0.0/16`)."
 }
 
-variable "public_subnet_ids" {
-  type        = list(string)
-  default     = []
-  description = "A list of public subnet ids."
-  sensitive   = true
-
-}
-
 variable "igw_id" {
   type        = string
   default     = ""
